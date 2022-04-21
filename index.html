@@ -121,6 +121,7 @@
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
+                                          
 
             //Add the the layer to the map
             map.addLayer({
@@ -133,7 +134,7 @@
               filter: ['has', 'Typ'],        
               'paint': {
                 'circle-radius': 5,
-                'circle-color': ['boolean',['get','Typ','Laserscanning'],true], #d6ce2b ]
+                'circle-color': ['Laserscanning==', ['get', 'Typ'], '#d6ce2']
     
                             
               }
