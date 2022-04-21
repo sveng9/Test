@@ -132,7 +132,8 @@
               },
               'paint': {
                 'circle-radius': 5,
-                'circle-color': [ 'get','Typ'] == "Laserscanning", "#d6ce2b"
+                'circle-color': ['boolean',["get","Typ","Laserscanning"],true], #d6ce2b ]
+    
                             
               }
             });
