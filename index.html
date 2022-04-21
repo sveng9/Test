@@ -130,9 +130,10 @@
                 'type': 'geojson',
                 'data': data
               },
+              filter: ['has', 'Typ'],        
               'paint': {
                 'circle-radius': 5,
-                'circle-color': ['boolean',["get","Typ","Laserscanning"],true], #d6ce2b ]
+                'circle-color': ['boolean',['get','Typ','Laserscanning'],true], #d6ce2b ]
     
                             
               }
