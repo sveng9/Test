@@ -120,7 +120,7 @@
           lonfield: 'Longitude',
           delimiter: ','
         }, function (err, data) {
-          map.on('load', function (e) {
+          map.on('load', 'csvData', function (e) {
                        
            if (e.features[0].properties.Typ === "VFX") {
                                  color == red
