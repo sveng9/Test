@@ -72,7 +72,13 @@
     .mapboxgl-popup-anchor-top>.mapboxgl-popup-tip {
       border-bottom-color: rgb(61, 59, 59);
     }
-                                                             
+    var color = "yellow"                                                         
+    if (features[0].properties.Typ === "VFX") {
+                                 color == "red"
+                                  } else {
+                                   color == "yellow"
+                                  }                       
+                                                                                       
                                                                
                                                              
                             
@@ -83,7 +89,7 @@
 
   <div id='map'></div>
   <script>
-  var color = "yellow"
+  
     var transformRequest = (url, resourceType) => {
       var isMapboxRequest =
         url.slice(8, 22) === "api.mapbox.com" ||
@@ -124,12 +130,7 @@
         }, function (err, data) {
           map.on('load', 'csvData', function () {
                        
-             if (features[0].properties.Typ === "VFX") {
-                                 color == "red"
-                                  } else {
-                                   color == "yellow"
-                                  }                       
-                              
+            
 
             //Add the the layer to the map
             map.addLayer({
@@ -144,7 +145,7 @@
                       
               'paint': {
                 'circle-radius': 5,
-                'circle-color': "yellow"
+                'circle-color': color
                               }
                
             });
