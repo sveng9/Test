@@ -145,8 +145,20 @@
                       
               'paint': {
                 'circle-radius': 5,
-                'circle-color': color
-                              }
+                'circle-color':[
+                              
+                              'match',
+                              ['get', 'Typ'],
+                               'Laserscanning',
+                                '#fbb03b',
+                                'VFX',
+                                '#223b53',
+                                'Architekturstudio',
+                                 '#e55e5e',
+                                'Digital Twin',
+                                '#3bb2d0',
+                              /* other */ '#ccc'
+                              ]
                
             });
 
