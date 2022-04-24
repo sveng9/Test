@@ -134,7 +134,7 @@
               filter: ['has', 'Typ'],        
               'paint': {
                 'circle-radius': 5,
-                'circle-color': "yellow"
+                'circle-color': if (e.features[0].properties.Typ === "VFX") {"red"} else {"yellow"}
                               }
                
             });
