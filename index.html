@@ -155,7 +155,12 @@
             // location of the feature, with description HTML from its properties.
             map.on('click', 'csvData', function (e) {
               var coordinates = e.features[0].geometry.coordinates.slice();
-                                  
+              var color = "yellow"                                                         
+    if (e.features[0].properties.Typ === "VFX") {
+                                 color == "red"
+                                  } else {
+                                   color == "yellow"
+                                  }                                     
 
               //set popup text
               //You can adjust the values of the popup to match the headers of your CSV.
